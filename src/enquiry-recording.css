@@ -1,0 +1,128 @@
+.enquiry-recording {
+  margin-block: clamp(2rem, 5vw, 3.5rem);
+  padding: clamp(1rem, 3vw, 1.75rem);
+  border: 1px solid rgb(108 153 218 / 20%);
+  border-radius: 1.5rem;
+  background: linear-gradient(135deg, rgb(35 61 94 / 23%), rgb(74 52 113 / 9%) 75%), #0d1420;
+}
+
+.enquiry-recording__heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.enquiry-recording__status {
+  margin: 0 0 0.65rem;
+  color: #91bcf5;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.045em;
+}
+
+.enquiry-recording__heading h2 {
+  margin: 0;
+  color: #edf3ff;
+  font-size: clamp(1.25rem, 2.6vw, 1.7rem);
+  line-height: 1.25;
+}
+
+.enquiry-recording__duration {
+  flex-shrink: 0;
+  padding: 0.35rem 0.6rem;
+  border: 1px solid rgb(130 153 202 / 22%);
+  border-radius: 999px;
+  color: #b7c9e5;
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.enquiry-recording__note {
+  max-width: 72ch;
+  margin: 0.85rem 0 1.25rem;
+  color: #aebdd4;
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+.enquiry-recording__video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgb(130 153 202 / 18%);
+  border-radius: 0.85rem;
+  background: #070c14;
+  object-fit: contain;
+}
+
+.enquiry-recording__footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  margin-top: 1.1rem;
+  color: #b9c8df;
+  font-size: 0.8rem;
+  line-height: 1.65;
+}
+
+.enquiry-recording__description {
+  flex: 1;
+  min-width: 0;
+}
+
+.enquiry-recording__description summary {
+  width: fit-content;
+  color: #c3d8fa;
+  cursor: pointer;
+}
+
+.enquiry-recording__description ol {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.enquiry-recording__description li {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  gap: 0.75rem;
+}
+
+.enquiry-recording__timestamp {
+  color: #8bb8f6;
+  font-variant-numeric: tabular-nums;
+}
+
+.enquiry-recording__download {
+  flex-shrink: 0;
+  color: #c3d8fa;
+  text-underline-offset: 0.2em;
+}
+
+.enquiry-recording__download:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.enquiry-recording__video:focus-visible,
+.enquiry-recording__description summary:focus-visible,
+.enquiry-recording__download:focus-visible {
+  outline: 2px solid #82b6ff;
+  outline-offset: 4px;
+}
+
+@media (width <= 600px) {
+  .enquiry-recording__footer {
+    flex-direction: column;
+  }
+
+  .enquiry-recording__heading {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+}

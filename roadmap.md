@@ -1,0 +1,17 @@
+# Redesign verification
+- [x] Updated professional title and business positioning
+- [x] Portrait-led opening screen matching the provided reference
+- [x] Five consistent service cards
+- [x] Owner-confirmed Vapi/n8n voice architecture preview
+- [x] Authentic screenshots and verified existing demo URL retained
+- [x] Industry examples, process, About and compact tools
+- [x] Validated enquiry form, secure optional delivery and honest email fallback
+- [x] Canonical URL, social card, sitemap and robots
+- [x] Reduced-motion styles, keyboard controls and accessible labels
+- [x] TypeScript and production Vercel build
+- [x] Submission failure/success tests with mocked delivery only
+- [ ] Rendered desktop/tablet/mobile review — browser runtime could not initialize
+- [ ] Real enquiry workflow receipt — needs configured n8n webhook and secret
+- [ ] Real chat response — needs Gemini credentials
+- [ ] Public voice demo — not supplied; testing in progress
+- [ ] Publish redesign to existing apsal_portfolio repository/Vercel project

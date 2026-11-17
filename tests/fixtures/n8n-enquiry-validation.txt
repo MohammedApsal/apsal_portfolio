@@ -1,0 +1,33 @@
+const body = $input.first().json.body;
+const bad = () => [{ json: { valid: false } }];
+if (!body || typeof body !== 'object' || Array.isArray(body)) return bad();
+const text = (key, max) => typeof body[key] === 'string' && body[key].trim().length <= max ? body[key].trim() : null;
+const lead = {};
+for (const [key, max] of Object.entries({name:100, company:150, email:254, whatsapp:30, service:100, industry:100, budget:100, details:3000})) {
+  lead[key] = text(key, max);
+  if (lead[key] === null) return bad();
+}
+if (lead.name.length < 2 || !lead.company || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(lead.email) || lead.details.length < 15 || body.source !== 'apsal-portfolio') return bad();
+if (lead.whatsapp && !/^[+()\d\s-]{7,30}$/.test(lead.whatsapp)) return bad();
+const services = ["Digital Marketing & Lead Generation", "AI Workflow Automation", "AI Voice Assistant", "AI Agents & Customer Support", "Website Development", "CRM Automation", "Not Sure Yet"];
+const industries = ["Real Estate", "Clinics & Healthcare", "E-commerce & D2C", "Service Business / SME", "Other"];
+const budgets = ["Prefer to discuss", "Below ₹25,000", "₹25,000–₹50,000", "₹50,000–₹1,00,000", "Above ₹1,00,000"];
+if (!services.includes(lead.service) || !industries.includes(lead.industry) || !budgets.includes(lead.budget)) return bad();
+// Treat untrusted enquiry fields as spreadsheet text, never formulas.
+const safe = value => value; // Sheet writes use RAW to preserve text, not formulas.
+if (body.submissionId !== undefined && (typeof body.submissionId !== "string" || !/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(body.submissionId))) return bad();
+const row = {
+  "Submission ID": body.submissionId || "legacy-" + String($execution.id),
+  "Received At": new Date().toISOString(),
+  "Name": safe(lead.name), "Company": safe(lead.company),
+  "Email": safe(lead.email), "WhatsApp": safe(lead.whatsapp),
+  "Service": safe(lead.service), "Industry": safe(lead.industry),
+  "Budget": safe(lead.budget), "Project Details": safe(lead.details),
+  "Source": "apsal-portfolio", "Lead Status": "New", "Notification Status": "Pending", "Notified At": ""
+};
+const notification = ["New portfolio enquiry", "", "Name: " + lead.name, "Business: " + lead.company,
+  "Email: " + lead.email, "WhatsApp: " + (lead.whatsapp || "Not provided"),
+  "Service: " + lead.service, "Industry: " + lead.industry, "Budget: " + lead.budget,
+  "", "Project details:", lead.details, "", "Saved to Portfolio Enquiries / Leads.",
+  "Enquiry ID: " + row["Submission ID"]].join("\n");
+return [{ json: { valid: true, row, notification } }];

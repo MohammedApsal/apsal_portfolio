@@ -1,0 +1,88 @@
+WEBVTT
+
+00:00:00.100 --> 00:00:02.300
+On screen: Edited browser rescheduling test.
+Recorded 18 October 2026.
+
+00:00:02.500 --> 00:00:05.700
+Caller: I'd like to reschedule my
+appointment.
+
+00:00:05.900 --> 00:00:09.097
+Assistant: I can help with that. Could you
+please provide me with your full
+
+00:00:09.097 --> 00:00:12.295
+Assistant: name and the phone number you used
+for the appointment? Also, if you
+
+00:00:12.295 --> 00:00:15.000
+Assistant: know the current appointment date
+and time, that would be helpful.
+
+00:00:15.200 --> 00:00:17.800
+On screen: Contact details entered. This
+private exchange is omitted.
+
+00:00:18.000 --> 00:00:21.300
+Assistant: Thank you, Apsal. To reschedule,
+please tell me your preferred new
+
+00:00:21.300 --> 00:00:23.100
+Assistant: date and time for the appointment.
+
+00:00:23.300 --> 00:00:27.200
+Caller: The same day. I need to book at 12:00
+PM.
+
+00:00:27.400 --> 00:00:30.850
+Assistant: The 12:00 PM slot on October 19 is
+available for rescheduling. Would
+
+00:00:30.850 --> 00:00:34.012
+Assistant: you like me to proceed with
+rescheduling your appointment to that
+
+00:00:34.012 --> 00:00:34.300
+Assistant: time?
+
+00:00:34.500 --> 00:00:35.400
+Caller: Yes.
+
+00:00:35.600 --> 00:00:38.200
+On screen: The recorded rescheduling tool
+reports completed successfully.
+
+00:00:38.400 --> 00:00:41.148
+Assistant: Your appointment has been
+successfully rescheduled to Monday,
+
+00:00:41.148 --> 00:00:45.957
+Assistant: October 19 at 12:00 PM. Is there
+anything else I can assist you with
+
+00:00:45.957 --> 00:00:46.300
+Assistant: today?
+
+00:00:46.500 --> 00:00:53.700
+Caller: Wait. Can you book a time that is
+already taken?
+
+00:00:53.900 --> 00:00:57.494
+Assistant: I cannot book or reschedule an
+appointment to a time slot that is
+
+00:00:57.494 --> 00:01:00.812
+Assistant: already taken. I can only help
+with available slots. Would you like
+
+00:01:00.812 --> 00:01:03.300
+Assistant: me to check for other available
+times for you?
+
+00:01:03.500 --> 00:01:05.900
+On screen: Rescheduling and unavailable-slot
+responses demonstrated. Testing
+
+00:01:05.900 --> 00:01:06.300
+On screen: continues.

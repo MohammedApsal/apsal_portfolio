@@ -1,0 +1,171 @@
+.voice-recordings {
+  margin-block: 0 clamp(2.5rem, 5vw, 4rem);
+}
+
+.voice-recordings__heading {
+  max-width: 75ch;
+  margin-bottom: 1.75rem;
+}
+
+.voice-recordings__eyebrow {
+  margin: 0 0 0.7rem;
+  color: #91bcf5;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.045em;
+}
+
+.voice-recordings__heading h2 {
+  margin: 0;
+  color: #edf3ff;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  line-height: 1.25;
+}
+
+.voice-recordings__heading > p:not(.voice-recordings__eyebrow) {
+  margin: 0.9rem 0 0;
+  color: #aebdd4;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.voice-recordings__heading > p.voice-recordings__caption-note {
+  margin-top: 0.5rem;
+  color: #91a4c0;
+  font-size: 0.78rem;
+}
+
+.voice-recordings__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 1.5rem;
+}
+
+.voice-recordings__card {
+  min-width: 0;
+  padding: clamp(1rem, 2.4vw, 1.5rem);
+  border: 1px solid rgb(108 153 218 / 20%);
+  border-radius: 1.25rem;
+  background: linear-gradient(140deg, rgb(35 61 94 / 21%), rgb(74 52 113 / 8%) 80%), #0d1420;
+}
+
+.voice-recordings__card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.voice-recordings__number {
+  color: #8bb8f6;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.035em;
+}
+
+.voice-recordings__duration {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid rgb(130 153 202 / 22%);
+  border-radius: 999px;
+  color: #b7c9e5;
+  font-size: 0.7rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.voice-recordings__card h3 {
+  margin: 0;
+  color: #edf3ff;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.35;
+}
+
+.voice-recordings__description {
+  margin: 0.65rem 0 1.15rem;
+  color: #aebdd4;
+  font-size: 0.85rem;
+  line-height: 1.65;
+}
+
+.voice-recordings__video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgb(130 153 202 / 18%);
+  border-radius: 0.75rem;
+  background: #070c14;
+  object-fit: contain;
+}
+
+.voice-recordings__footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.25rem;
+  margin-top: 1rem;
+  color: #b9c8df;
+  font-size: 0.78rem;
+  line-height: 1.65;
+}
+
+.voice-recordings__transcript {
+  flex: 1;
+  min-width: 0;
+}
+
+.voice-recordings__transcript summary {
+  width: fit-content;
+  color: #c3d8fa;
+  cursor: pointer;
+}
+
+.voice-recordings__transcript > div {
+  margin-top: 1rem;
+}
+
+.voice-recordings__transcript[open] {
+  flex-basis: 100%;
+}
+
+.voice-recordings__transcript p {
+  margin: 0 0 0.9rem;
+}
+
+.voice-recordings__transcript strong {
+  color: #dce9ff;
+  font-weight: 600;
+}
+
+.voice-recordings__download {
+  color: #c3d8fa;
+  text-underline-offset: 0.2em;
+}
+
+.voice-recordings__download:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.voice-recordings__limitation {
+  margin: 1.1rem 0 0;
+  max-width: 95ch;
+  color: #91a4c0;
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
+.voice-recordings__video:focus-visible,
+.voice-recordings__transcript summary:focus-visible,
+.voice-recordings__download:focus-visible {
+  outline: 2px solid #82b6ff;
+  outline-offset: 4px;
+}
+
+@media (width <= 420px) {
+  .voice-recordings__footer {
+    flex-direction: column;
+  }
+}
